@@ -1,0 +1,108 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with background */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #a4136a 0%, #421e65 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+/* Container for centering */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Section - Text Display */
+.display-text {
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #eeacac;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+/* Button Section */
+.toggle-button {
+    padding: 18px 45px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: burlywood;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+.toggle-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+.toggle-button:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    
+    .display-text {
+        font-size: 4.5rem;
+    }
+    
+    .toggle-button {
+        padding: 16px 40px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+        gap: 25px;
+    }
+    
+    .display-text {
+        font-size: 3.5rem;
+    }
+    
+    .toggle-button {
+        padding: 14px 35px;
+        font-size: 1.2rem;
+    }
+}
